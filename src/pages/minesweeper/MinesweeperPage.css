@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    background-color: #363636;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    
+    
+}
+
+.first_block {
+    height: fit-content;
+}
+
+.container_game {
+    display: flex;
+    width: 1200px;
+    margin-top: 110px;
+    padding: 30px;
+    background-color: #727272;
+    height: fit-content;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+.grid {
+    margin: 20px;
+    border-radius: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Це вирівнює елементи по горизонталі */
+    align-items: center; /* Це вирівнює елементи по вертикалі */
+    height: fit-content;
+    background-color: #daf6f9;
+    overflow: hidden;
+  }
+  
+  .grid_cell {
+    /* Ці стилі вирівнюють текст по горизонталі і вертикалі */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1px;
+    margin: 0 auto;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+  }
+
+.buttonDiv{
+    display: inline;
+}
+
+.unactive{
+    background-color: #79c0e7;
+}
+
+.active{
+    background-color: #daf6f9;
+    border: 1px #a8e7ee;
+    animation: activating 0.3s linear;
+}
+@keyframes activating {
+    0%{
+        border-radius: 0px;
+    }
+    100%{
+        transform: scale(0);
+        border-radius: 50px;
+    }
+    
+}
+.grid_cell.active.count-0::after{
+    content: "";
+}
+.grid_cell.active.count-1::after{
+    content: "1";
+    color: blue;
+}
+.grid_cell.active.count-2::after{
+    content: "2";
+    color: cyan;
+}
+.grid_cell.active.count-3::after{
+    content: "3";
+    color: rgb(35, 192, 143);
+}
+.grid_cell.active.count-4::after{
+    content: "4";
+    color: rgb(34, 211, 37);
+}
+.grid_cell.active.count-5::after{
+    content: "5";
+    color: rgb(150, 216, 36);
+}
+.grid_cell.active.count-6::after{
+    content: "6";
+    color: rgb(213, 236, 11);
+}
+.grid_cell.active.count-7::after{
+    content: "7";
+    color: rgb(226, 162, 24);
+}
+.grid_cell.active.count-8::after{
+    content: "8";
+    color: rgb(255, 21, 0);
+}
+.grid_cell.active.bomb::after{
+    content: "💣";
+    animation: explode 0.5s linear;
+}
+.grid_cell.flag::after{
+    content: "🚩";
+}
+
+@keyframes explode {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
+button{
+    height: 50px;
+    width: 100px;
+    border: 10px solid;
+    background-color: #b5aeae;
+    border-color: #8e8c83 #5b584c #5b584c #65645d;
+    margin:10px;
+
+}
+
+
