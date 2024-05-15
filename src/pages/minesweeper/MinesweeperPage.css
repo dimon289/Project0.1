@@ -19,7 +19,8 @@ main {
 
 .container_game {
     display: flex;
-    width: 1200px;
+    align-items: center;
+    width: fit-content;
     margin-top: 110px;
     padding: 30px;
     background-color: #727272;
