@@ -10,13 +10,14 @@ class Minesweeper extends Component {
       items: [],
       active: "inactive",
       bombsAmount: 20,
-      flagLeft: 20,
+      flagLeft: 0,
       width: 10,
       gamearray: [],
       bombDisactive:0,
       gameover: false,
       div_width: 400,  
-      showModal: false
+      showModal: false,
+      value:10
     };
   }
 
@@ -267,56 +268,83 @@ class Minesweeper extends Component {
 
 }
 
+smallgrid = () => {
+  this.setState({
+    items:[],
+    gameover: false,
+    bombsAmount: 20,
+    flagLeft: 20,
+    width: 10,
+    height: 10,
+    gamearray: [],
+    bombDisactive:0,
+  }, () => {
+    this.setState({div_width: this.state.width * 40})
+    this.setBomb(); // Викликаємо setBomb після того, як стан буде оновлено
+  });
+}
+
+mediumgrid = () => {
+  this.setState({
+    items:[],
+    gameover: false,
+    bombsAmount: 50,
+    flagLeft: 50,
+    width: 15,
+    height: 15,
+    gamearray: [],
+    bombDisactive:0
+  }, () => {
+    this.setState({div_width: this.state.width * 40})
+    this.setBomb();
+  });
+}
+
+biggrid = () => {
+  this.setState({
+    items:[],
+    gameover: false,
+    bombsAmount: 70,
+    flagLeft: 70,
+    width: 20,
+    height: 20,
+    gamearray: [],
+    bombDisactive:0,
+  }, () => {
+    this.setState({div_width: this.state.width * 40})
+    this.setBomb();
+  });
+}
+
   
-  smallgrid = () => {
-    this.setState({
-      items:[],
-      gameover: false,
-      bombsAmount: 20,
-      flagLeft: 20,
-      width: 10,
-      height: 10,
-      gamearray: [],
-      bombDisactive:0,
-    }, () => {
-      this.setState({div_width: this.state.width * 40})
-      this.setBomb(); // Викликаємо setBomb після того, як стан буде оновлено
-    });
+creategrid = () => {
+  const value = Math.floor(this.state.value);
+  const bombsAmount = Math.floor((value * value) / 4);
+
+  if (isNaN(value) || value <= 0) {
+      console.error('Invalid grid size value:', value);
+      return;
   }
-  
-  mediumgrid = () => {
-    this.setState({
-      items:[],
+
+  this.setState({
+      items: [],
       gameover: false,
-      bombsAmount: 50,
-      flagLeft: 50,
-      width: 15,
-      height: 15,
+      bombsAmount: bombsAmount,
+      flagLeft: bombsAmount,
+      width: value,
+      height: value,
       gamearray: [],
-      bombDisactive:0
-    }, () => {
-      this.setState({div_width: this.state.width * 40})
+      bombDisactive: 0,
+  }, () => {
+      this.setState({ div_width: value * 40 });
       this.setBomb();
-    });
-  }
+  });
+}
   
-  biggrid = () => {
-    this.setState({
-      items:[],
-      gameover: false,
-      bombsAmount: 70,
-      flagLeft: 70,
-      width: 20,
-      height: 20,
-      gamearray: [],
-      bombDisactive:0,
-    }, () => {
-      this.setState({div_width: this.state.width * 40})
-      this.setBomb();
-    });
-  }
-  
-  
+  handleChange = (event) => {
+    this.setState({ value:event.target.value }); // Відкидаємо дробову частину
+  };
+
   render() {
     return (
       <main>
@@ -324,9 +352,20 @@ class Minesweeper extends Component {
           <div className="container_game">
             <div id="Flags">Flags left: <span id="flags-left">{this.state.flagLeft}</span></div>
             <div className="buttonDiv">
+            <p>{this.state.value}x{this.state.value}</p>
+            <input
+              type="range"
+              min="5"
+              max="30"
+              step="1"  // Додаємо крок, щоб повзунок рухався по цілих числах
+              value={this.state.value}
+              onChange={this.handleChange}
+            />
+            <button onClick={this.creategrid}>Create</button>
             <button onClick={this.smallgrid}>small</button>
             <button onClick={this.mediumgrid}>medium</button>
             <button onClick={this.biggrid}>big</button>
+
             </div>
             <div className="grid"style={{width: this.state.div_width+"px"}}>{this.state.items}</div>
           </div>
