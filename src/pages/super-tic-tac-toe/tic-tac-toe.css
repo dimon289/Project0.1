@@ -1,0 +1,148 @@
+main {
+    background-color: #363636;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: relative;
+    
+    
+}
+
+.main_block {
+    height: fit-content;
+
+    display: flex;
+    justify-content: center;
+    
+
+    
+}
+
+.game_container {
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 110px;
+    background-color: #727272;
+    height: 700px;
+    border-radius: 20px;
+}
+#playground{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    background-color: #a1b18c;
+    border-radius: 20px;
+    filter: blur(5px);
+    
+}
+#super_field{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 490px;
+    height: 475px;
+    flex-wrap: wrap;
+}
+.f{
+    display: flex;
+    width: 155px;
+    height: 155px;
+    flex-wrap: wrap;
+    margin: 1px;
+    filter: blur(0px);
+}
+.cell{
+    background-color: bisque;
+    width: 50px; 
+    height: 50px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.c1{
+    border-right: 2px solid black ;
+    border-left: 2px solid black ;
+}
+.c3{
+    border-top: 2px solid black ;
+    border-bottom: 2px solid black ;
+}
+.c4{
+    border: 2px solid black;
+}
+.c5{
+    border-top: 2px solid black ;
+    border-bottom: 2px solid black ;
+}
+.c7{
+    border-right: 2px solid black ;
+    border-left: 2px solid black ;
+}
+
+#start_button{
+    display: flex;
+    width: 150px;
+    height: 60px;
+    background-color: grey;
+    border: 2px solid black;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+}
+.ff{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgttt{
+    position: absolute;
+    width: 155px;
+    height: 155px;
+    z-index: -1;
+    opacity: 0;
+    pointer-events: none;
+}
+.xwon{
+    z-index: 1;
+    opacity: 1;
+}
+.owon{
+    z-index: 1;
+    opacity: 1;
+}
+.unactive{
+    filter: blur(2px);
+    pointer-events: none;
+}
+.winttt_form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 200px;    
+    position: absolute;
+    z-index: -2;
+    flex-direction: column;
+    backdrop-filter: blur(5px);
+   
+}
+.winttt_form > div {
+    margin-top: 90px;
+    border: 1px solid gray;
+    width: 90px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

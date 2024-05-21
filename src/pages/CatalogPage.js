@@ -13,11 +13,10 @@ function CatalogPage() {
         <p>Minesweeper</p>
         <img src={logo} alt="Alternate text" className='logo'/>
         </Link>
-        <a href='dddd' className='game_block'>
-        <p>Game 1</p>
+        <Link className = "game_block" to="/tic-tac-toe">
+        <p>super-tic-tac-toe</p>
         <img src={logo} alt="Alternate text" className='logo'/>
-        
-        </a>
+        </Link>
         <a href='dddd' className='game_block'>
         <p>Game 1</p>
         <img src={logo} alt="Alternate text" className='logo'/>
