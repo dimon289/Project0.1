@@ -121,7 +121,7 @@ main {
     z-index: 1;
     opacity: 1;
 }
-.unactive{
+.unactive_ttt{
     filter: blur(2px);
     pointer-events: none;
 }

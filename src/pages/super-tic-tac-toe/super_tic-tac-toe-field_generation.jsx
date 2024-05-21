@@ -15,7 +15,7 @@ function super_field_generation(){
         ||(winnerImgs[3].classList.contains("xwon") && winnerImgs[4].classList.contains("xwon") && winnerImgs[5].classList.contains("xwon"))
         ||(winnerImgs[6].classList.contains("xwon") && winnerImgs[7].classList.contains("xwon") && winnerImgs[8].classList.contains("xwon"))){
             document.querySelectorAll(".f").forEach(element => {
-                element.classList.add("unactive")
+                element.classList.add("unactive_ttt")
                 element.style.filter = "blur(0)"
             });
             wintext="Виграли X"
@@ -32,7 +32,7 @@ function super_field_generation(){
         ||(winnerImgs[3].classList.contains("owon") && winnerImgs[4].classList.contains("owon") && winnerImgs[5].classList.contains("owon"))
         ||(winnerImgs[6].classList.contains("owon") && winnerImgs[7].classList.contains("owon") && winnerImgs[8].classList.contains("owon"))){
             document.querySelectorAll(".f").forEach(element => {
-                element.classList.add("unactive")
+                element.classList.add("unactive_ttt")
                 element.style.filter = "blur(0)" 
             });
             wintext="Виграли O"
