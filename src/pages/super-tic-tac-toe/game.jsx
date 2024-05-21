@@ -1,5 +1,4 @@
-var turnX = true
-function game(){
+function game(turnX){
     var cells = document.querySelectorAll('.cell') 
     cells.forEach(element => {
     element.addEventListener("click",function(){

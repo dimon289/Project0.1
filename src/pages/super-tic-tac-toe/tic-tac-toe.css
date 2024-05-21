@@ -36,7 +36,7 @@ main {
     height: 500px;
     background-color: #a1b18c;
     border-radius: 20px;
-    filter: blur(5px);
+    
     
 }
 #super_field{
@@ -46,6 +46,7 @@ main {
     width: 490px;
     height: 475px;
     flex-wrap: wrap;
+    filter: blur(5px);
 }
 .f{
     display: flex;
@@ -139,7 +140,7 @@ main {
 .winttt_form > div {
     margin-top: 90px;
     border: 1px solid gray;
-    width: 90px;
+    width: 150px;
     height: 30px;
     display: flex;
     align-items: center;
