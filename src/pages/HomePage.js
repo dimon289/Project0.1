@@ -6,8 +6,8 @@ import Slider from 'react-slick';
 import './HomePage.css';
 import TeamMember from './TeamMember';
 import Illa_V from "../HISOKA/hisoka_illa1.jpg"
-import jullia from "../HISOKA/juliannnnnnnnnnnnnnnnna.jpg"
-import Illa_T from "../HISOKA/hisoka_illa2.jpg"
+import jullia from "../HISOKA/lelelelelelle.jpg"
+import Illa_T from "../HISOKA/illa.jpg"
 import da from "../HISOKA/da.jpg"
 import team from "../HISOKA/dream_team.jpg"
 

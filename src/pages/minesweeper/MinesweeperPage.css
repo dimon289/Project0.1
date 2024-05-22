@@ -102,7 +102,7 @@ main {
     justify-content: center; /* Це вирівнює елементи по горизонталі */
     align-items: center; /* Це вирівнює елементи по вертикалі */
     height: fit-content;
-    background-color: #9bf478;
+    background-color: #daf6f9;
     overflow: hidden;
   }
   
@@ -126,12 +126,12 @@ main {
 }
 
 .unactive{
-    background-color: #77e895;
+    background-color: #70e1d2;
 }
 
 .active{
-    background-color: #9bf478;
-    border: 1px #9bf478;
+    background-color: #daf6f9;
+    border: 1px #a8e7ee;
     animation: activating 0.3s linear;
 }
 @keyframes activating {

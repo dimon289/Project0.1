@@ -13,7 +13,8 @@ export default function Tic_tac_toe(){
             game(turnX)
   }
   var i = 0
-  const[playground,setPlayground]=useState(<FieldGeneration key={`game№${i}`}/>)
+  console.log(i)
+  const[playground,setPlayground]=useState(<FieldGeneration key={Date.now()}/>)
   const[win,setWin]=useState(wintext)
   return <>
     <main> 
@@ -24,12 +25,13 @@ export default function Tic_tac_toe(){
           <div id="winnerForm"className="winttt_form" onMouseEnter={()=>{setWin(wintext)}}>
             <p>{win}</p>
             <div onClick={()=>{
-              i++
+              i+=1
               document.getElementById("winnerForm").style.zIndex=-1
               document.getElementById("start_button").style.zIndex=1
               document.getElementById("super_field").style.filter = "blur(5px)"
               turnX = true
-              setPlayground(<FieldGeneration key={`game№${i}`}/>)}}>Почати нову гру</div></div>
+              console.log(i)
+              setPlayground(<FieldGeneration key={Date.now()}/>)}}>Почати нову гру</div></div>
         </div>
       </div>
     </main>  
