@@ -5,6 +5,11 @@ import logo from './logo.png';
 import Slider from 'react-slick';
 import './HomePage.css';
 import TeamMember from './TeamMember';
+import Illa_V from "../HISOKA/hisoka_illa1.jpg"
+import jullia from "../HISOKA/juliannnnnnnnnnnnnnnnna.jpg"
+import Illa_T from "../HISOKA/hisoka_illa2.jpg"
+import da from "../HISOKA/da.jpg"
+import team from "../HISOKA/dream_team.jpg"
 
 
 const HomePage = () => {
@@ -28,7 +33,7 @@ const HomePage = () => {
           <img src={logo} alt="Slide 1" />
         </div>
         <div>
-          <img src={logo} alt="Slide 2" />
+          <img src={team} alt="Slide 2" />
         </div>
         <div>
           <img src={logo} alt="Slide 3" />
@@ -37,10 +42,10 @@ const HomePage = () => {
 
       <div style={{ marginTop: '80px' }}>
         <h2 style={{color: '#f2f2f2', lineHeight: '50px', fontSize: '40px', display: 'flex', justifyContent: 'center'}}>Наша Команда</h2>
-        <TeamMember image="https://via.placeholder.com/150" text="Текст для первого члена команды" />
-        <TeamMember image="https://via.placeholder.com/150" text="Текст для второго члена команды" reverse />
-        <TeamMember image="https://via.placeholder.com/150" text="Текст для третьего члена команды" />
-        <TeamMember image="https://via.placeholder.com/150" text="Текст для четвертого члена команды" reverse />
+        <TeamMember image={Illa_V} text="Ілля Вакуленко" />
+        <TeamMember image={Illa_T} text="Ілля Ткаченко" reverse />
+        <TeamMember image={jullia} text="Компанієць Юліанна" />
+        <TeamMember image={da} text="Дмитро Ткаченко" reverse />
       </div>
     </div>
     </main>

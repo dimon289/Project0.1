@@ -319,7 +319,7 @@ biggrid = () => {
   
 creategrid = () => {
   const value = Math.floor(this.state.value);
-  const bombsAmount = Math.floor((value * value) / 4);
+  const bombsAmount = Math.floor((value * value) / 5);
 
   if (isNaN(value) || value <= 0) {
       console.error('Invalid grid size value:', value);

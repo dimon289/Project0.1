@@ -21,7 +21,14 @@ main {
     
     
 }
+p{
+    color: rgb(255, 255, 255);
+}
 
+img {
+
+    object-fit: cover;
+}
 
 .slick-next {
     right: 5px;
