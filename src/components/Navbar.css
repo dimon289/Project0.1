@@ -1,6 +1,7 @@
+ 
 .header_container {
     width: 100%;
-    background-color: #727272;
+    background-color: #241f22;
     height: 60px;
 
 }
@@ -21,6 +22,7 @@ header {
     width: 1200px;
     margin-left: calc((100% - 1200px)/2);
     justify-content: space-between;
+    height: 100%;
 
 }
 
